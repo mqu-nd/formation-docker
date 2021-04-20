@@ -1,0 +1,5 @@
+FROM alpine
+RUN mkdir /home/app
+WORKDIR /home/app
+COPY run.sh .
+CMD sh run.sh
