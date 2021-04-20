@@ -34,3 +34,11 @@ docker run -d --name db --network bridge-1 training/postgres
 docker run -d -P --name webapp --network bridge-1 --link db:db training/webapp python app.py
 ```
 
+!> pas besoin de faire explicitement un link si les containers se trouvent dans un même réseau 
+
+Pour tester la connexion 
+
+```
+docker exec webapp ping db
+docker exec db ping webapp
+```
