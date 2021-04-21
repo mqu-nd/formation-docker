@@ -1,10 +1,10 @@
 # Création du container
 
-`docker run -d --name TP5postgres -e POSTGRES_PASSWORD=tp5 -v tp5vol:/var/lib/postgresql/data postgres`
+`docker run -d --name TP5postgres -e POSTGRES_PASSWORD=tp5 -p 5432:5432 -v tp5vol:/var/lib/postgresql/data postgres`
 
 ou
 
-`docker run -d --name TP5postgres -e POSTGRES_PASSWORD=tp5 --mount type=volume,source=tp5vol,target=/var/lib/postgresql/data postgres`
+`docker run -d --name TP5postgres -e POSTGRES_PASSWORD=tp5 -p 5432:5432 --mount type=volume,source=tp5vol,target=/var/lib/postgresql/data postgres`
 
 # Tests Docker
 
