@@ -23,6 +23,9 @@ Tips : Accéder à la base de données avec un gestionnaire de base de données 
 
 docker run -d --name TP5postgres -e  POSTGRES_PASSWORD=tp5 -v tp5vol:/var/lib/postgresql/data postgres
 
+docker run -d --name TP5postgres -e  POSTGRES_PASSWORD=tp5 --mount type=volume,source=tp5vol,target=/var/lib/postgresql/data postgres 
+
+
 root@819b524f7312:/# psql --username postgres
 psql (13.2 (Debian 13.2-1.pgdg100+1))
 Type "help" for help.
@@ -31,17 +34,28 @@ Type "help" for help.
 
 Sur un terminal shell attaché au container TP5progres :
 
-postgres=# CREATE DATABASE tp6;
+root@17a47d246a63:/# psql --username postgres
+psql (13.2 (Debian 13.2-1.pgdg100+1))
+Type "help" for help.
+
+postgres=# select datname from pg_database;
+  datname  
+-----------
+ postgres
+ template1
+ template0
+(3 rows)
+
+postgres=# CREATE DATABASE tp5;
 CREATE DATABASE
-postgres=# select * from pg_database;
-  oid  |  datname  | datdba | encoding | datcollate |  datctype  | datistemplate | datallowconn | datconnlimit | datlastsysoid | datfrozenxid | datminmxid | dattablespace |               datacl
--------+-----------+--------+----------+------------+------------+---------------+--------------+--------------+---------------+--------------+------------+---------------+-------------------------------------
- 13395 | postgres  |     10 |        6 | en_US.utf8 | en_US.utf8 | f             | t            |           -1 |         13394 |          479 |          1 |          1663 |
- 16384 | tp5       |     10 |        6 | en_US.utf8 | en_US.utf8 | f             | t            |           -1 |         13394 |          479 |          1 |          1663 |
-     1 | template1 |     10 |        6 | en_US.utf8 | en_US.utf8 | t             | t            |           -1 |         13394 |          479 |          1 |          1663 | {=c/postgres,postgres=CTc/postgres}
- 13394 | template0 |     10 |        6 | en_US.utf8 | en_US.utf8 | t             | f            |           -1 |         13394 |          479 |          1 |          1663 | {=c/postgres,postgres=CTc/postgres}
- 16385 | tp6       |     10 |        6 | en_US.utf8 | en_US.utf8 | f             | t            |           -1 |         13394 |          479 |          1 |          1663 |
-(5 rows)
+postgres=# select datname from pg_database;
+  datname  
+-----------
+ postgres
+ tp5
+ template1
+ template0
+(4 rows)
 
 ## Conclusion 
 
