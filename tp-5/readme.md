@@ -12,12 +12,25 @@ Sur un terminal shell attaché au container TP5progres :
 
 ```
 root@17a47d246a63:/# psql --username postgres psql (13.2 (Debian 13.2-1.pgdg100+1)) Type "help" for help.
+postgres=# select datname from pg_database;
+
+  datname
+-----------
+ postgres
+ template1
+ template0
+(3 rows)
+
+postgres=# CREATE DATABASE tp5; CREATE DATABASE tp5
 postgres=# select datname from pg_database; datname
+  datname
+-----------
+ postgres
+ tp5
+ template1
+ template0
+(4 rows)
 
-postgres template1 template0 (3 rows)
-postgres=# CREATE DATABASE tp5; CREATE DATABASE postgres=# select datname from pg_database; datname
-
-postgres tp5 template1 template0 (4 rows)
 ```
 
 # Conclusion
