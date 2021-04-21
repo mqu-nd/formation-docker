@@ -19,7 +19,9 @@ Tips : Accéder à la base de données avec un gestionnaire de base de données 
 
 # Commandes
 
-## docker run -d --name TP5postgres -e  POSTGRES_PASSWORD=tp5 -v tp5vol:/var/lib/postgresql/data postgres
+## Création du container
+
+docker run -d --name TP5postgres -e  POSTGRES_PASSWORD=tp5 -v tp5vol:/var/lib/postgresql/data postgres
 
 root@819b524f7312:/# psql --username postgres
 psql (13.2 (Debian 13.2-1.pgdg100+1))
