@@ -10,4 +10,11 @@
 2. Adaptation du fichier devcontainer.json
 3. Lancement par clic en bas à gauche (>< en vert) et choix de l'entrée "Reopen in Container"
 
+# Lancement de l'application
+
+Execution des commandes mise en commentaire dans le dockerfile:
+
+1. npm install
+2. npm run dev
+
 
