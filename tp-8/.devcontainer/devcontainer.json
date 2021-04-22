@@ -1,0 +1,9 @@
+{
+    "name": "tp-8",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "backend",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/sh"
+    },
+    "workspaceFolder": "/opt/app",
+}
