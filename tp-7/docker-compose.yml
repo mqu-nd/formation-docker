@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  appserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - ./app:/app:rw
+    ports:
+      - "3000:3000"
+    networks:
+      - tp8_network
+    depends_on:
+      - sqlserver
+  
+  sqlserver:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - ./database:/var/opt/mysql:rw
+    ports:
+      - "3306:3306"
+    networks:
+      - tp8_network
+
+networks:
+  tp8_network:
+    driver: "bridge"
