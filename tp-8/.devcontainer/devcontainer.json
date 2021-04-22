@@ -1,0 +1,18 @@
+{
+    "name": "devcontainer",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "settings": {
+    "terminal.integrated.shell.linux": "/bin/sh" // Par défaut /bin/bash peux être modifié en fonction du terminal dispo 
+     
+    },
+    "forwardPorts": [ // Port transféré avec votre machine hôte
+                    3000
+    ],
+    "workspaceFolder": "/app", // Dossier de travail de votre VSCode au sein de votre conteneur,
+    "extensions": [ // Extensions installé lors du lancemenet de votre remote container dans votre VSCode
+         "msjsdiag.debugger-for-chrome",
+       
+    ]
+}
+    

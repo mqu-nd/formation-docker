@@ -15,3 +15,5 @@ Montrer que les données sont bien pérsisté dans le conteneur pour ensuite les
 Ici nous souhaitons stocker ces données sur un volume dédié.
 
 Tips : Accéder à la base de données avec un gestionnaire de base de données (ex : dbeaver, pgadmin, extension visual studio, etc)
+
+-------------- https://qastack.fr/programming/37694987/connecting-to-postgresql-in-a-docker-container-from-outside ----------------
