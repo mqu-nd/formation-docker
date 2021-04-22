@@ -1,10 +1,12 @@
--- Dans le projet getting-started
+MISE EN PLACE D'UNE APPLICATION DANS LE DOCKER
+
+Ici c'est le projet getting-started (react Js+Node +MySQL)
 
     1 - Modification de docker-compose.yml : 
-           - mise en place de node pour faire tourner l'application Js(React pour le front et nod en back)
+           - mise en place de node pour faire tourner l'application Js(React pour le front et node en back)
            - définition de l'application et son repertoire de travail.
            - définition de ports à partager. 
-           - mise en place de la base de données mySQL.
+           - mise en place de la base de données MySQL.
            - définition de volume pour persister les données.
            - ---------------docker-compose.yml --------------
                     version: "3.7"
