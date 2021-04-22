@@ -1,0 +1,14 @@
+# Docker commands
+
+docker pull training/postgres
+docker pull training/webapp
+docker network create tp4-net
+docker run -d  --name db --network tp4-net training/postgres
+docker run -d  --name db --network tp4-net training/webapp
+docker create --name db --network tp4-net training/postgres
+docker create --name web --network tp4-net training/webapp
+
+# Test
+attach to training/webapp
+ping db
+ping web
