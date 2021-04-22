@@ -51,3 +51,7 @@ backend_1  | Listening on port 3000
 # Test du service
 
 Ouverture d'un navigateur sur le port 3000
+
+# Utilisation multi-container
+
+Utilisation du fichier compose docker-compose-tp7.yml à la place du fichier du fichier docker-compose.yml
