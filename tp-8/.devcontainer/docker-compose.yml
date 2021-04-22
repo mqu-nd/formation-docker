@@ -1,0 +1,40 @@
+version: '3.7'
+
+services: 
+  app:
+    build: 
+      context: .
+    environment: 
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: mypassword
+      MYSQL_DB: app
+    volumes: 
+      - ../:/app
+      - nodemodule:/app/node_modules
+    ports: 
+      - 3000:3000
+    networks: 
+      - appnet
+    depends_on: 
+      - db
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+      MYSQL_DATABASE: app
+    networks: 
+      - appnet
+
+  adminer:
+    image: adminer
+    ports:
+      - 8082:8080
+    networks: 
+      - appnet
+
+volumes: 
+  nodemodule:
+
+networks: 
+  appnet:
