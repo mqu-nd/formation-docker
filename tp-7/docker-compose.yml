@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  backend:
+    build: 
+      context: .
+    volumes:
+      - ./:/home/app
+      - nodemodule:/home/app/node_modules
+    ports:
+      - 3000:3000
+    networks:
+      - public
+networks:
+  public:
+
+volumes: 
+  nodemodule:
