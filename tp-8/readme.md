@@ -20,5 +20,5 @@ Execution des commandes mise en commentaire dans le dockerfile:
 2. npm run dev
 
 
-![Run App In Container](tp8-runapp in container.jpg)
+![Run App In Container](tp8-run.jpg)
 
