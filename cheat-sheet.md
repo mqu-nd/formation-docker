@@ -1,5 +1,8 @@
 # Cheat sheet Docker
-Voici la cheat sheet officiel : https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf
+Voici la cheat sheet officiel : 
+Le PDF :  [https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
+Le site : https://www.docker.com/resources/cli-cheat-sheet/
+
 
 ## Commande docker :
 
@@ -21,6 +24,8 @@ docker container rm < CONTAINER ID > # Pour supprimer un conteneur
 docker image rm <IMAGE ID> # Pour supprimer une image 
 
 docker image prune # Pour supprimer les images qui ne sont pas utilisées
+
+docker build -t <TAG NAME> . # Pour construire l’image docker à partir d’un fichier Dockerfile. L’option -t = nom de l’image et le point est le contexte associé, donc ici . le dossier courant, cela ira chercher le Dockerfile dans ce dossier par défaut
 ```
 
 ## Instructions Dockerfile
