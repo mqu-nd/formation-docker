@@ -1,0 +1,13 @@
+{
+    "name": "devontainertp8",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/sh"
+            }
+        }
+    },
+    "workspaceFolder": "/app"
+}

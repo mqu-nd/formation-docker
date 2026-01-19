@@ -1,0 +1,23 @@
+version: '3.7'
+
+services: 
+  app:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    volumes: 
+      - ../:/app
+      - /app/node_modules
+      - mydata:/app/data
+    ports: 
+      - 3000:3000
+
+  db:
+    image: ubuntu
+    tty: true
+    volumes:
+      - mydata:/data
+volumes:
+  mydata:

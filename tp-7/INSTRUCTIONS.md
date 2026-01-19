@@ -6,8 +6,6 @@ Objectif :
 
 Dans ce TP, vous trouverez une application qui vous faudra dockerizer pour favoriser un environement de developpement.
 
-L'application provient du getting-started de docker : https://github.com/docker/getting-started
-
 Voici comment elle est construite :
 - Back : node js (v12)
 - Front : React JS 
