@@ -25,3 +25,9 @@ Une fois les exercices terminés, créez une pull request depuis votre repositor
 
 Ajoutez un commentaire à votre pull request avec votre Nom, Prénom et nom docker hub.
 
+
+commande : 
+```sh
+docker login
+docker push < DOCKER ID >/tp1:1.0
+```
